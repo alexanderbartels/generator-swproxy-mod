@@ -22,7 +22,7 @@ Yeoman has a heart of gold. He&#39;s a person with feelings and opinions, but he
 
 ## License
 
-MIT © [Alexander Bartels](www.alexanderbartels.com)
+MIT © [Alexander Bartels](http://www.alexanderbartels.com)
 
 
 [npm-image]: https://badge.fury.io/js/generator-swproxy-mod.svg
