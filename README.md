@@ -1,5 +1,5 @@
 # generator-swproxy-mod [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> Yeoman generator to create mods for the swproxy library.
+> Yeoman generator to create mods for the [swproxy](https://github.com/alexanderbartels/swproxy) library.
 
 ## Installation
 
