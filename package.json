@@ -45,8 +45,8 @@
   },
   "repository": "https://github.com/alexanderbartels/generator-swproxy-mod.git",
   "scripts": {
-    "prepublish": "gulp prepublish",
-    "test": "gulp"
+    "prepublish": "./node_modules/.bin/gulp prepublish",
+    "test": "./node_modules/.bin/gulp test-ci"
   },
   "license": "MIT"
 }
