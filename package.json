@@ -1,23 +1,31 @@
 {
   "name": "generator-swproxy-mod",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Yeoman generator to create mods for the swproxy library.",
-  "homepage": "swproxy.alexanderbartels.com",
+  "homepage": "http://www.alexanderbartels.com/swproxy-www",
   "author": {
     "name": "Alexander Bartels",
-    "email": "bartels.xander@gmail.com",
-    "url": "www.alexanderbartels.com"
+    "url": "http://www.alexanderbartels.com"
   },
   "files": [
     "dist"
   ],
   "main": "dist/index.js",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "swproxy",
+    "swproxy-mod",
+    "serviceworker"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.21.1",
     "chalk": "^1.0.0",
+    "deep-extend": "^0.4.0",
+    "generator-node": "^1.7.0",
+    "inquirer-npm-name": "^1.0.0",
+    "lodash": "^3.6.0",
+    "mkdirp": "^0.5.1",
+    "superb": "^1.0.0",
+    "yeoman-generator": "^0.21.1",
     "yosay": "^1.0.2"
   },
   "devDependencies": {

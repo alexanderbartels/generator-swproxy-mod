@@ -1,0 +1,53 @@
+// import base classes
+import { SwProxyMod, SwProxyModRule } from 'swproxy-mod';
+
+class Mod<%- capitalizedName %>Rule extends SwProxyModRule {
+  constructor(srcUrl, ruleDef, modifier) {
+    super();
+    this.srcUrl = srcUrl;
+    this.ruleDef = ruleDef;
+    this.modifier = modifier;
+  }
+
+  match(event) {
+    return this.srcUrl.test(event.request.url);
+  }
+
+  execute(originalEvent, event) {
+    return new Promise((resolve) => {
+
+      // TODO implement rule execution
+
+      resolve(this.mergeModifier(event, this.modifier));
+    });
+  }
+}
+
+/**
+ * Mod that should be registered at the swproxy instance
+ */
+class Mod<%- capitalizedName %> extends SwProxyMod {
+  /**
+   * @returns {string} name for the factory method
+   */
+  static factoryMethodName() {
+    return super.factoryMethodName('<%- name %>Rule');
+  }
+
+  /**
+   * @param proxy the swproxy instances
+   * @returns {Function} function that returns a factory function to create rules
+   */
+  static factoryMethod(swproxy) {
+    // this function will be added to the swproxy instance with the name given by the factoryMethodName function
+    return (srcUrl, destUrl, modifier) => {
+      return new Mod<%- capitalizedName %>Rule(srcUrl, destUrl, modifier);
+    };
+  }
+}
+
+// export Mod as default, for simple use in service worker scripts
+export {
+  Mod<%- capitalizedName %> as default,
+  Mod<%- capitalizedName %>Rule
+};

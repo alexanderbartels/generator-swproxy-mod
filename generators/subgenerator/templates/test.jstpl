@@ -1,0 +1,23 @@
+
+import { assert } from 'chai';
+import { default as Mod<%- capitalizedName %>, Mod<%- capitalizedName%>Rule } from '../src/<%- generatorName %>.js';
+
+describe('swproxy:mod-<%- name %>', function () {
+
+  it('provides a name for the factory method', function () {
+    assert.equal(Mod<%- capitalizedName %>.factoryMethodName(), '<%- name %>Rule', 'Name for the mod rule is defined');
+  });
+
+  it('provides a factory method to create a <%- name %>Rule', function (done) {
+    let proxyMod = {
+      addFetchRule: (rule) => {
+        assert.ok(rule, 'rule is defined');
+        done();
+      }
+    };
+
+    let factoryMethod = Mod<%- capitalizedName %>.factoryMethod(proxyMod);
+    assert.typeOf(factoryMethod, 'function', 'factory method that expect a proxy as argument is defined');
+    assert.typeOf(factoryMethod('arg1', 'foo', 'bar'), 'object', 'rule factory creates an object');
+  });
+});
