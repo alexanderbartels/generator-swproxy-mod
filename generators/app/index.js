@@ -80,7 +80,7 @@ module.exports = yeoman.generators.Base.extend({
       var pkg = this.fs.readJSON(this.destinationPath('package.json'), {});
       extend(pkg, {
         dependencies: {
-          'swproxy-mod': '0.0.0-beta.1'
+          'swproxy-mod': '0.0.1'
         }
       });
       pkg.keywords = pkg.keywords || [];
