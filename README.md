@@ -13,10 +13,11 @@ npm install -g generator-swproxy-mod
 Then generate your new project:
 
 ```bash
-yo generator-swproxy-mod
+yo swproxy-mod
 ```
 
 Have a look at the [swproxy website](http://www.alexanderbartels.com/swproxy-www) to see which mods are already available.
+More information about how to write a swproxy mod, provided at the github repository [https://github.com/alexanderbartels/swproxy](https://github.com/alexanderbartels/swproxy).
 
 ## Getting To Know Yeoman
 

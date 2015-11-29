@@ -1,6 +1,6 @@
 {
   "name": "generator-swproxy-mod",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Yeoman generator to create mods for the swproxy library.",
   "homepage": "http://www.alexanderbartels.com/swproxy-www",
   "author": {

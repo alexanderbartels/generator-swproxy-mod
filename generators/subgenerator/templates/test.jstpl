@@ -19,5 +19,6 @@ describe('swproxy:mod-<%- name %>', function () {
     let factoryMethod = Mod<%- capitalizedName %>.factoryMethod(proxyMod);
     assert.typeOf(factoryMethod, 'function', 'factory method that expect a proxy as argument is defined');
     assert.typeOf(factoryMethod('arg1', 'foo', 'bar'), 'object', 'rule factory creates an object');
+    assert.deepEqual(new Mod<%- capitalizedName %>Rule('arg1', 'foo', 'bar'), factoryMethod('arg1', 'foo', 'bar'), 'factory method creates rule');
   });
 });
